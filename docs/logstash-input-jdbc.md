@@ -5,7 +5,7 @@
 - convert_tz(datetime, '+08:00', '+00:00')：转换为 UTC时间
 
 # 增量更新
-- last_modified / modified_at
+- last_modified / last_updated / modified_at
 
 ```bash
 input {
