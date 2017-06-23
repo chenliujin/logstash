@@ -6,7 +6,7 @@ $ docker pull docker.elastic.co/logstash/logstash:5.4.2
 ```
 
 # Notice
-- docker.io/logstash:5.4.2 input-jdbc-mysql 不成功，暂时不要使用此版本
+- docker.io/logstash:5.4.2 input-jdbc-mysql 导入数据不成功，暂时不要使用此版本
 
 
 # 参考文献
