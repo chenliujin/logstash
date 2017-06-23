@@ -11,6 +11,9 @@
 - last_modified / last_updated / modified_at
 - :sql_last_value 存储位置：~/.logstash_jdbc_last_run
 
+# 计划任务
+- schedule
+
 ```bash
 input {
 	jdbc {
@@ -18,6 +21,7 @@ input {
 		tracking_column		=> last_modified
 		last_run_metadata_path	=> "/opt/logstash/log/db.table.jdbc.last_run"
 		statement 		=> "SELECT id, last_modified FROM orders WHERE last_modified > :sql_last_value"
+		schedule		=> "0 5 * * *"
 	}
 }
 ```
