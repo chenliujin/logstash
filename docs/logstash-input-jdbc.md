@@ -2,8 +2,7 @@
 
 
 # 时间转换
-- mysql function: timestamp()
-
+- convert_tz(datetime, '+08:00', '+00:00')：转换为 UTC时间
 
 # 增量更新
 - last_modified / modified_at
