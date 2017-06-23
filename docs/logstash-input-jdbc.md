@@ -1,6 +1,7 @@
 
 - use_column_value: :sql_last_value 是否使用字段的值 
 - tracking_column: :sql_last_value 使用哪个字段的值, SELECT 中需包含这个字段
+- last_run_metadata_path: sql_last_value 存放位置
 
 
 # 时间转换
@@ -15,7 +16,8 @@ input {
 	jdbc {
 		use_column_value	=> true
 		tracking_column		=> last_modified
-		statement 		=> "SELECT * FROM orders WHERE last_modified > :sql_last_value"
+		last_run_metadata_path	=> "/opt/logstash/log/db.table.jdbc.last_run"
+		statement 		=> "SELECT id, last_modified FROM orders WHERE last_modified > :sql_last_value"
 	}
 }
 ```
