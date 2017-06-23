@@ -1,4 +1,0 @@
-
-
-# string to date
-- timestamp()
