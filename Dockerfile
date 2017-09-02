@@ -4,6 +4,9 @@ MAINTAINER chenliujin <liujin.chen@qq.com>
 
 USER root
 
+# 1.修改时区
+RUN cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime 
+ 
 RUN mkdir -p /opt/logstash/log && \
     chown -R logstash:logstash /opt/logstash/log
 
